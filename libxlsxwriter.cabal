@@ -1,0 +1,36 @@
+name:           libxlsxwriter
+version:        0.0.0.1
+synopsis:       Excel generation (libxlsxwriter)
+maintainer:     Blake Rain <blake.rain@inchora.com>
+license:        BSD3
+build-type:     Simple
+cabal-version:  >= 1.10
+
+library
+  hs-source-dirs:
+      src
+  ghc-options: -Wall -O2
+  build-depends:
+      base
+    , data-default
+    , time
+  exposed-modules:
+      Data.Excel
+  other-modules:
+      Paths_libxlsxwriter
+  default-language: Haskell2010
+  extra-libraries:
+      xlsxwriter
+
+
+executable excel-test1
+  main-is: excel-test1.hs
+  hs-source-dirs:
+      test
+  ghc-options: -Wall -O2
+  build-depends:
+      base
+    , data-default
+    , time
+    , libxlsxwriter
+  default-language: Haskell2010
